@@ -15,3 +15,4 @@ Prior to this, I spent 6 months interning at Adobe MDSR, India, working with May
 I studied Computer Science Engineering at IIIT Hyderabad, and primarily worked with Professor Madhava Krishna on vision in relation to autonomous driving. 
 
 
+Find my Resume [here](files/Resume_June_2022.pdf).
