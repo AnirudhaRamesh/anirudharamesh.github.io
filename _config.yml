@@ -85,7 +85,7 @@ author:
   bio              : "Graduate Student at Robotics Institute, Carnegie Mellon University."
   location         : "Pittsburgh, PA"
   employer         :
-  pubmed           : "https://www.ncbi.nlm.nih.gov/pubmed/?term=john+snow"
+#   pubmed           : "https://www.ncbi.nlm.nih.gov/pubmed/?term=john+snow"
 #   googlescholar    : "http://yourfullgooglescholarurl.com"
   email            : aramesh3@andrew.cmu.edu
 #   researchgate     :  # example: "https://www.researchgate.net/profile/yourprofile"
