@@ -19,4 +19,4 @@ Find my Resume [here](files/Resume_June_2022.pdf).
 
 Always excited to discuss, learn, and help out! Please reach out via email.
 
-On the job market, starting Fall 2023.
+On the market for full-time roles, starting Fall 2023.
