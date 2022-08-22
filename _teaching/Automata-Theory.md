@@ -3,7 +3,7 @@ title: "Automata Theory"
 collection: teaching
 type: "Undergraduate course"
 venue: "IIIT-Hyderabad"
-date: 2019
+date: 1st August 2019
 location: "Hyderabad, India"
 
 ---
