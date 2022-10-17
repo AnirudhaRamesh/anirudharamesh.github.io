@@ -12,6 +12,6 @@ venue: 'Datasets and Benchmarks, NeurIPS 2021'
 
 Identifying and tackling implicit biases in few shot learning systems (few shot segmentation) from a data perspective, which leads to general performance improvements for networks across the state of the art.
 
-[Download paper here]([http://academicpages.github.io/files/paper1.pdf](https://openreview.net/pdf?id=BlcUQYxknbX))
+[Download paper here](https://openreview.net/pdf?id=BlcUQYxknbX)
 
 <!-- Recommended citation: Your Name, You. (2009). "Paper Title Number 1." <i>Journal 1</i>. 1(1). -->
