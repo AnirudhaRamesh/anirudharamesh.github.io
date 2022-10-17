@@ -4,7 +4,7 @@ collection: publications
 permalink: /publication/Multi-object-Monocular-SLAM-for-Dynamic-Environments
 excerpt: 'We present a metric scale absolute novel solution for simultaneous localization and mapping (SLAM) in the challenging scenario of autonomous driving platforms equipped with only a monocular camera'
 date: 10 Feb 2020
-venue: 'IEEE Intelligent Vehicles Symposium 2020 (IV2020)'
+venue: 'IEEE Intelligent Vehicles Symposium 2020 (IV)'
 
 ---
 <!-- paperurl: 'http://academicpages.github.io/files/paper3.pdf' -->
