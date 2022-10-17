@@ -1,4 +1,6 @@
-# main links links
+# main links
+#  (title: "Guide") For guide
+#  (url: /markdown/)
 main:
   - title: "Publications"
     url: /publications/   
@@ -9,5 +11,3 @@ main:
   - title: "Blog Posts and Projects"
     url: /year-archive/
     
-#   - title: "Guide"
-#     url: /markdown/
