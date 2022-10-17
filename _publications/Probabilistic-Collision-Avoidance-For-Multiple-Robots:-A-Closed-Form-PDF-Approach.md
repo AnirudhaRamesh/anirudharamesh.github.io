@@ -3,8 +3,8 @@ title: "Probabilistic Collision Avoidance For Multiple Robots: A Closed Form PDF
 collection: publications
 permalink: /publication/Probabilistic-Collision-Avoidance-For-Multiple-Robots:-A-Closed-Form-PDF-Approach
 excerpt: "We propose a novel method for reactive multiagent collision avoidance by characterizing the longitudinal and lateral intent uncertainty along a trajectory as a closed-form probability density function. We do so by introducing it into the Time Scaled Collision Cone (TSCC) approach."
-date: 15 Nov 2020
-venue: 'IEEE Intelligent Vehicles Symposium 2021 (IV2021)'
+date: 15 Nov 2021
+venue: 'IEEE Intelligent Vehicles Symposium (IV)'
 
 ---
 <!-- paperurl: 'http://anirudharamesh.github.io/files/BirdSLAM.pdf' -->
