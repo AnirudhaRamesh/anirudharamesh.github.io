@@ -48,6 +48,14 @@ layout: default
         {% elsif page.citation %}
           <p>Recommended citation: {{ page.citation }} </p>
         {% endif %}
+        
+        {% if page.website %}
+          <p>Project Website: <a href="{{ page.website }}"><u>{{ page.website }}</u></a></p>
+        {% endif %}
+        
+        {% if page.videourl %}
+          <p>Video: <a href="{{ page.videourl }}"><u>Watch Talk</u></a></p>
+        {% endif %}
     
         </header>
       {% endunless %}
