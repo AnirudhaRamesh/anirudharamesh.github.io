@@ -87,8 +87,7 @@ author:
   bio              : "Research Engineer at InstaDeep"
   location         : "San Francisco"
   employer         :
-#   pubmed           : "https://www.ncbi.nlm.nih.gov/pubmed/?term=john+snow"
-#   googlescholar    : "http://yourfullgooglescholarurl.com"
+  googlescholar    : "https://scholar.google.com/citations?user=_xTXoTQAAAAJ&hl=en"
   email            : anirudha.ramesh50@gmail.com
 #   researchgate     :  # example: "https://www.researchgate.net/profile/yourprofile"
   uri              :

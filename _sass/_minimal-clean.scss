@@ -1,0 +1,395 @@
+/* Minimal Clean Design - Override base styles */
+
+/* Light mode default colors */
+$bg-primary-light: #ffffff;
+$bg-secondary-light: #f8f9fa;
+$text-primary-light: #1a1a1a;
+$text-secondary-light: #6b7280;
+$border-light: #e5e7eb;
+$link-light: #2563eb;
+$code-bg-light: #f3f4f6;
+
+/* Dark mode colors */
+$bg-primary-dark: #1a1a1a;
+$bg-secondary-dark: #242424;
+$text-primary-dark: #e5e5e5;
+$text-secondary-dark: #a3a3a3;
+$border-dark: #404040;
+$link-dark: #60a5fa;
+$code-bg-dark: #2d2d2d;
+
+/* Apply light mode by default */
+body {
+  background-color: $bg-primary-light;
+  color: $text-primary-light;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Dark mode via media query */
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: $bg-primary-dark;
+    color: $text-primary-dark;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    color: $text-primary-dark;
+  }
+
+  p, li, td {
+    color: $text-primary-dark;
+  }
+
+  a {
+    color: $link-dark;
+
+    &:hover {
+      color: lighten($link-dark, 10%);
+    }
+  }
+
+  .greedy-nav {
+    background: $bg-primary-dark;
+    border-bottom: 1px solid $border-dark;
+
+    a {
+      color: $text-primary-dark;
+
+      &:hover {
+        color: $link-dark;
+      }
+    }
+  }
+
+  .masthead {
+    background: $bg-primary-dark;
+    border-bottom: 1px solid $border-dark;
+  }
+
+  .author__bio {
+    color: $text-secondary-dark;
+  }
+
+  .author__urls a {
+    color: $text-secondary-dark;
+
+    &:hover {
+      color: $link-dark;
+    }
+  }
+
+  .archive__item {
+    background: $bg-primary-dark;
+    border: 1px solid $border-dark;
+
+    &:hover {
+      border-color: $link-dark;
+    }
+  }
+
+  .archive__item-title a {
+    color: $text-primary-dark;
+
+    &:hover {
+      color: $link-dark;
+    }
+  }
+
+  .archive__item-excerpt {
+    color: $text-secondary-dark;
+  }
+
+  pre, code {
+    background-color: $code-bg-dark;
+    border: 1px solid $border-dark;
+    color: $text-primary-dark;
+  }
+
+  table {
+    background: $bg-primary-dark;
+
+    th, td {
+      border: 1px solid $border-dark;
+      color: $text-primary-dark;
+    }
+
+    th {
+      background: $bg-secondary-dark;
+    }
+
+    tr:hover {
+      background: $bg-secondary-dark;
+    }
+  }
+
+  .page__footer {
+    background: $bg-secondary-dark;
+    border-top: 1px solid $border-dark;
+    color: $text-secondary-dark;
+
+    a {
+      color: $text-secondary-dark;
+
+      &:hover {
+        color: $link-dark;
+      }
+    }
+  }
+
+  .page__meta, .page__date {
+    color: $text-secondary-dark;
+  }
+
+  blockquote {
+    border-left-color: $link-dark;
+    color: $text-secondary-dark;
+  }
+
+  .btn {
+    background: $bg-primary-dark;
+    border: 1px solid $border-dark;
+    color: $text-primary-dark;
+
+    &:hover {
+      border-color: $link-dark;
+      color: $link-dark;
+    }
+  }
+
+  .notice {
+    background: $bg-secondary-dark;
+    border: 1px solid $border-dark;
+    border-left: 3px solid $link-dark;
+    color: $text-primary-dark;
+  }
+}
+
+/* Square avatar, no shadow */
+.author__avatar {
+  img {
+    border-radius: 0 !important;
+    border: 1px solid $border-light;
+    box-shadow: none !important;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .author__avatar img {
+    border-color: $border-dark;
+  }
+}
+
+/* Clean minimal typography */
+body {
+  line-height: 1.7;
+  font-size: 17px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
+
+h1 {
+  font-weight: 700;
+}
+
+h2 {
+  border-bottom: 1px solid $border-light;
+  padding-bottom: 0.3em;
+}
+
+@media (prefers-color-scheme: dark) {
+  h2 {
+    border-bottom-color: $border-dark;
+  }
+}
+
+/* Links - simple style */
+a {
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+/* Minimal navigation */
+.greedy-nav {
+  background: $bg-primary-light;
+  border-bottom: 1px solid $border-light;
+
+  a {
+    color: $text-primary-light;
+    font-weight: 500;
+    font-size: 0.95em;
+
+    &:hover {
+      color: $link-light;
+    }
+  }
+}
+
+.masthead {
+  border-bottom: 1px solid $border-light;
+  background: $bg-primary-light;
+}
+
+/* Author sidebar */
+.author__bio {
+  color: $text-secondary-light;
+  font-size: 0.95em;
+}
+
+.author__urls {
+  a {
+    color: $text-secondary-light;
+    font-size: 0.9em;
+
+    &:hover {
+      color: $link-light;
+    }
+  }
+}
+
+/* Archive items */
+.archive__item {
+  border: 1px solid $border-light;
+  border-radius: 4px;
+  padding: 1.5em;
+  margin-bottom: 1.5em;
+  background: $bg-primary-light;
+  transition: all 0.2s ease;
+
+  &:hover {
+    border-color: $link-light;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  }
+}
+
+.archive__item-title {
+  margin-top: 0;
+  font-size: 1.3em;
+  font-weight: 600;
+
+  a {
+    color: $text-primary-light;
+
+    &:hover {
+      color: $link-light;
+    }
+  }
+}
+
+.archive__item-excerpt {
+  color: $text-secondary-light;
+  font-size: 0.95em;
+}
+
+/* Code blocks */
+pre, code {
+  background-color: $code-bg-light;
+  border: 1px solid $border-light;
+  font-family: 'SF Mono', Monaco, 'Cascadia Code', Consolas, monospace;
+  border-radius: 4px;
+}
+
+pre {
+  padding: 1em;
+  overflow-x: auto;
+}
+
+code {
+  padding: 0.2em 0.4em;
+  font-size: 0.9em;
+}
+
+/* Tables */
+table {
+  background: $bg-primary-light;
+  border-collapse: collapse;
+
+  th, td {
+    padding: 0.75em 1em;
+    border: 1px solid $border-light;
+  }
+
+  th {
+    background: $bg-secondary-light;
+    font-weight: 600;
+  }
+
+  tr:hover {
+    background: $bg-secondary-light;
+  }
+}
+
+/* Blockquotes */
+blockquote {
+  border-left: 3px solid $link-light;
+  padding-left: 1.5em;
+  margin-left: 0;
+  font-style: italic;
+  color: $text-secondary-light;
+}
+
+/* Footer */
+.page__footer {
+  background: $bg-secondary-light;
+  border-top: 1px solid $border-light;
+  color: $text-secondary-light;
+
+  a {
+    color: $text-secondary-light;
+
+    &:hover {
+      color: $link-light;
+    }
+  }
+}
+
+/* Metadata */
+.page__meta, .page__date {
+  color: $text-secondary-light;
+  font-size: 0.9em;
+}
+
+/* Buttons */
+.btn {
+  background: $bg-primary-light;
+  border: 1px solid $border-light;
+  color: $text-primary-light;
+  border-radius: 4px;
+  font-weight: 500;
+  transition: all 0.2s ease;
+
+  &:hover {
+    border-color: $link-light;
+    color: $link-light;
+  }
+}
+
+/* Notice boxes */
+.notice {
+  background: $bg-secondary-light;
+  border: 1px solid $border-light;
+  border-left: 3px solid $link-light;
+  color: $text-primary-light;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Remove shadows */
+.page__hero, .archive, .list__item {
+  box-shadow: none;
+}
+
+/* Accessibility */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

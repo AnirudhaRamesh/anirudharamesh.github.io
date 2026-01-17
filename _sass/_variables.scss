@@ -28,13 +28,9 @@ $bodoni                     : "Bodoni MT", serif;
 $calisto                    : "Calisto MT", serif;
 $garamond                   : Garamond, serif;
 
-/* Modern academic fonts */
-$inter                      : "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-$charter                    : "Charter", "Bitstream Charter", Georgia, serif;
-
-$global-font-family         : $inter;
-$header-font-family         : $inter;
-$caption-font-family        : $charter;
+$global-font-family         : $sans-serif;
+$header-font-family         : $sans-serif;
+$caption-font-family        : $serif;
 
 /* type scale - Modern academic sizing */
 $type-size-1                : 2.5em;    // ~40px
