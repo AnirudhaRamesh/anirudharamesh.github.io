@@ -1,0 +1,83 @@
+{% if page.layout == 'single' and page.date %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": {{ page.title | jsonify }},
+  "datePublished": "{{ page.date | date_to_xmlschema }}",
+  {% if page.modified %}
+  "dateModified": "{{ page.modified | date_to_xmlschema }}",
+  {% else %}
+  "dateModified": "{{ page.date | date_to_xmlschema }}",
+  {% endif %}
+  "author": {
+    "@type": "Person",
+    "name": "{{ site.author.name }}",
+    "url": "{{ site.url }}",
+    "jobTitle": "Research Engineer",
+    "affiliation": {
+      "@type": "Organization",
+      "name": "InstaDeep"
+    },
+    "alumniOf": [
+      {
+        "@type": "EducationalOrganization",
+        "name": "Carnegie Mellon University"
+      },
+      {
+        "@type": "EducationalOrganization",
+        "name": "IIIT Hyderabad"
+      }
+    ],
+    "knowsAbout": ["Artificial Intelligence", "Machine Learning", "Robotics", "Computer Vision", "Deep Reinforcement Learning", "Genomics", "Drug Discovery"]
+  },
+  "publisher": {
+    "@type": "Person",
+    "name": "{{ site.author.name }}",
+    {% if site.author.avatar %}
+    "logo": {
+      "@type": "ImageObject",
+      "url": "{{ site.url }}/images/{{ site.author.avatar }}"
+    },
+    {% endif %}
+    "url": "{{ site.url }}"
+  },
+  "description": {{ page.excerpt | default: site.description | strip_html | normalize_whitespace | jsonify }},
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "{{ page.url | prepend: site.url }}"
+  },
+  {% if page.header.image or page.header.overlay_image %}
+  "image": "{% if page.header.image %}{{ page.header.image | prepend: site.url }}{% else %}{{ page.header.overlay_image | prepend: site.url }}{% endif %}",
+  {% endif %}
+  "url": "{{ page.url | prepend: site.url }}",
+  "keywords": "{{ page.tags | join: ', ' }}"
+}
+</script>
+{% endif %}
+
+{% if page.url == "/" %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "{{ site.author.name }}",
+  "url": "{{ site.url }}",
+  "jobTitle": "{{ site.author.bio }}",
+  {% if site.author.location %}
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "{{ site.author.location }}"
+  },
+  {% endif %}
+  {% if site.author.email %}
+  "email": "{{ site.author.email }}",
+  {% endif %}
+  "sameAs": [
+    {% if site.author.github %}"https://github.com/{{ site.author.github }}",{% endif %}
+    {% if site.author.linkedin %}"https://www.linkedin.com/in/{{ site.author.linkedin }}",{% endif %}
+    {% if site.author.twitter %}"https://twitter.com/{{ site.author.twitter }}"{% endif %}
+  ]
+}
+</script>
+{% endif %}

@@ -3,11 +3,14 @@
 #  (url: /markdown/)
 main:
   - title: "Publications"
-    url: /publications/   
+    url: /publications/
+
+  - title: "Blog"
+    url: /blog/
 
   - title: "Teaching"
     url: /teaching/
-        
-  - title: "Blog Posts and Projects"
+
+  - title: "Projects"
     url: /year-archive/
     
