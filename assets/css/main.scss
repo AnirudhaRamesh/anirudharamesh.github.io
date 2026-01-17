@@ -193,6 +193,49 @@
     color: #a1a1aa !important;
   }
 
+  /* Hide tags */
+  .page__taxonomy {
+    display: none !important;
+  }
+
+  /* Hide pagination */
+  .pagination {
+    display: none !important;
+  }
+
+  /* Related posts styling */
+  .page__related {
+    border-top: 1px solid #27272a !important;
+
+    .archive__item {
+      border: 1px solid #27272a !important;
+      padding: 1rem !important;
+      margin-bottom: 1rem !important;
+      border-radius: 4px;
+
+      &:hover {
+        border-color: #3f3f46 !important;
+      }
+    }
+
+    .page__date,
+    .archive__item-excerpt {
+      display: none !important;
+    }
+  }
+
+  .page__related-title {
+    color: #fafafa !important;
+  }
+
+  /* Link underlines on hover */
+  .page__content a {
+    &:hover {
+      text-decoration: underline !important;
+      text-decoration-color: #3f3f46 !important;
+    }
+  }
+
   /* Code blocks */
   pre, code {
     background-color: #18181b !important;
@@ -411,6 +454,43 @@ code {
   }
 }
 
+/* Hide tags */
+.page__taxonomy {
+  display: none;
+}
+
+/* Hide pagination */
+.pagination {
+  display: none;
+}
+
+/* Related posts - compact styling */
+.page__related {
+  .page__date,
+  .archive__item-excerpt {
+    display: none;
+  }
+
+  .archive__item {
+    border: 1px solid #e5e7eb;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 4px;
+
+    &:hover {
+      border-color: #d1d5db;
+    }
+  }
+}
+
+/* Link underlines on hover */
+.page__content a {
+  &:hover {
+    text-decoration: underline;
+    text-decoration-color: #d1d5db;
+  }
+}
+
 /* Remove all shadows */
 .page__hero,
 .archive,
@@ -419,4 +499,14 @@ code {
 .archive__item,
 .archive__item-teaser {
   box-shadow: none !important;
+}
+
+/* Ensure Font Awesome icons display */
+.author__urls i,
+.author__urls .fa,
+.author__urls .fas,
+.author__urls .fab {
+  display: inline-block !important;
+  margin-right: 0.5rem !important;
+  width: auto !important;
 }
