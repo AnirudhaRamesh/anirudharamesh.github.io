@@ -14,7 +14,7 @@ I'm currently also working on improving compute-aware inference strategies in LL
 
 ## Background
 
-I completed my Masters in Robotics at [Carnegie Mellon University](https://www.ri.cmu.edu/) (CGPA: 4.12/4.0), advised by [Jeff Schneider](https://www.cs.cmu.edu/~schneide/) and [Christoph Mertz](https://www.ri.cmu.edu/ri-people/christoph-mertz/). I designed and deployed a perception system for 24/7 off-road autonomy using multi-spectral inputs, and introduced a domain adaptation framework that outperformed existing methods by +40% mIoU ([Thesis](https://www.ri.cmu.edu/publications/learning-to-see-in-the-dark-and-beyond/)).
+I completed my Masters in Robotics at [Carnegie Mellon University](https://www.ri.cmu.edu/), advised by [Jeff Schneider](https://www.cs.cmu.edu/~schneide/) and [Christoph Mertz](https://www.ri.cmu.edu/ri-people/christoph-mertz/). I designed and deployed a perception system for 24/7 off-road autonomy using multi-spectral inputs, and introduced a domain adaptation framework that outperformed existing methods by +40% mIoU ([Thesis](https://www.ri.cmu.edu/publications/learning-to-see-in-the-dark-and-beyond/)).
 
 Previously, I interned at Adobe's Media and Data Science Research Lab, where I discovered and solved biases in Few-Shot Segmentation datasets and methods, improving performance by ~5% mIoU ([NeurIPS 2021](https://papers.nips.cc/)).
 
@@ -22,10 +22,11 @@ I studied Computer Science at [IIIT Hyderabad](https://www.iiit.ac.in/) (CGPA: 9
 
 ## Research Interests
 
+- Agentic AI systems
+- Deep Reinforcement Learning for real-world optimization (PCB design, LLM post-training)
 - AI for Science (genomics, drug discovery, materials)
-- Deep Reinforcement Learning for real-world optimization
 - Computer vision in challenging domains (multi-spectral, off-road)
 - Domain adaptation and few-shot learning
-- Agentic AI systems
+- Robotic learning
 
 [Resume](files/resume.pdf) • [Research Vision](files/Research_Vision_V1.pdf)
