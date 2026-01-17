@@ -8,7 +8,7 @@ redirect_from:
   - /about.html
 ---
 
-I'm a Research Engineer at [InstaDeep](https://www.instadeep.com), where I work on applying and creating new AI capabilities in a variety of domains ranging from **Genomics and Drug Discovery**, to **Agentic Research Assistants**, **Deep Reinforcement Learning** for real-world problems, financial modeling and optimization, and more.
+I'm a Research Engineer at [InstaDeep](https://www.instadeep.com), where I work on applying and creating new AI capabilities in a variety of domains ranging from **Deep Reinforcement Learning** for real-world problems [DeepPCB](https://deeppcb.ai) and LLM Post-training, to **Genomics and Drug Discovery**, **Agentic Research Assistants**, financial modeling and optimization, and more.
 
 ## Background
 
