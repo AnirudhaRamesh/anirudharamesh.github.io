@@ -1,210 +1,226 @@
-/* Minimal Clean Design - Match reference site exactly */
+/* Complete CSS Rebuild - Clean, Readable, Minimal */
 
-/* Light mode colors */
-$light-bg: #ffffff;
-$light-text: #374151;
-$light-text-secondary: #6b7280;
-$light-link: #374151;
-$light-link-hover: #1f2937;
-$light-border: #e5e7eb;
-$light-code-bg: #f3f4f6;
+/* ============================================
+   DARK MODE (Primary - matching reference site)
+   ============================================ */
 
-/* Dark mode colors - matching reference site */
-$dark-bg: #0a0a0a;
-$dark-text: #e5e5e5;
-$dark-text-secondary: #a1a1aa;
-$dark-link: #d4d4d8;
-$dark-link-hover: #fafafa;
-$dark-border: #27272a;
-$dark-code-bg: #18181b;
-
-/* Base styles */
-html {
-  scroll-behavior: smooth;
-}
-
-body {
-  background-color: $light-bg;
-  color: $light-text;
-  font-size: 18px;
-  line-height: 1.75;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-  transition: background-color 0.2s ease, color 0.2s ease;
-}
-
-/* Dark mode */
 @media (prefers-color-scheme: dark) {
   body {
-    background-color: $dark-bg;
-    color: $dark-text;
+    background-color: #0a0a0a !important;
+    color: #e5e5e5 !important;
   }
 
+  /* Strong contrast for readability */
   h1, h2, h3, h4, h5, h6 {
-    color: $dark-text;
+    color: #fafafa !important;
   }
 
-  p, li, td, span {
-    color: $dark-text;
+  p, li, td, span, div {
+    color: #e5e5e5 !important;
   }
 
+  /* Subtle links - not bright */
   a {
-    color: $dark-link;
+    color: #d4d4d8 !important;
     text-decoration: none;
     transition: color 0.2s ease;
 
     &:hover {
-      color: $dark-link-hover;
+      color: #fafafa !important;
     }
 
     &:visited {
-      color: $dark-link;
+      color: #d4d4d8 !important;
     }
   }
 
-  .greedy-nav {
-    background: $dark-bg;
-    border-bottom: 1px solid $dark-border;
+  /* Navigation - NO WHITE BAR */
+  .greedy-nav,
+  .masthead,
+  .masthead__inner-wrap {
+    background: #0a0a0a !important;
+    border-bottom: none !important;
 
     a {
-      color: $dark-text;
+      color: #e5e5e5 !important;
 
       &:hover {
-        color: $dark-link-hover;
+        color: #fafafa !important;
       }
     }
-
-    .site-title {
-      color: $dark-text;
-    }
   }
 
-  .masthead {
-    background: $dark-bg;
-    border-bottom: 1px solid $dark-border;
+  .greedy-nav__toggle {
+    color: #e5e5e5 !important;
   }
 
-  .page__footer {
-    background: $dark-bg;
-    border-top: 1px solid $dark-border;
-    color: $dark-text-secondary;
+  .hidden-links {
+    background: #0a0a0a !important;
+    border: 1px solid #27272a !important;
+  }
+
+  /* Sidebar */
+  .sidebar {
+    background: transparent !important;
+  }
+
+  .author__name,
+  .author__content h3 {
+    color: #fafafa !important;
   }
 
   .author__bio {
-    color: $dark-text-secondary;
+    color: #a1a1aa !important;
   }
 
   .author__urls a {
-    color: $dark-text-secondary;
+    color: #a1a1aa !important;
 
     &:hover {
-      color: $dark-text;
+      color: #e5e5e5 !important;
     }
   }
 
   .author__avatar img {
-    border-color: $dark-border;
+    border: 1px solid #27272a !important;
   }
 
+  /* Main content */
+  .page {
+    background: transparent !important;
+  }
+
+  .page__content {
+    color: #e5e5e5 !important;
+  }
+
+  /* Archive items (blog posts) - NO WHITE BOXES */
   .archive__item {
-    background: $dark-bg;
-    border: 1px solid $dark-border;
+    background: transparent !important;
+    border: none !important;
+    padding: 0 !important;
+    margin-bottom: 2rem !important;
 
     &:hover {
-      border-color: #3f3f46;
+      background: transparent !important;
     }
   }
 
-  .archive__item-title a {
-    color: $dark-text;
+  .archive__item-teaser {
+    display: none !important;
+  }
 
-    &:hover {
-      color: $dark-link-hover;
+  .archive__item-title {
+    a {
+      color: #fafafa !important;
+
+      &:hover {
+        color: #ffffff !important;
+      }
     }
   }
 
   .archive__item-excerpt {
-    color: $dark-text-secondary;
+    color: #a1a1aa !important;
   }
 
+  /* Footer */
+  .page__footer {
+    background: #0a0a0a !important;
+    border-top: 1px solid #27272a !important;
+    color: #a1a1aa !important;
+
+    a {
+      color: #a1a1aa !important;
+
+      &:hover {
+        color: #e5e5e5 !important;
+      }
+    }
+  }
+
+  /* Code blocks */
   pre, code {
-    background-color: $dark-code-bg;
-    border: 1px solid $dark-border;
-    color: $dark-text;
+    background-color: #18181b !important;
+    border: 1px solid #27272a !important;
+    color: #e5e5e5 !important;
   }
 
+  /* Tables */
   table {
-    background: $dark-bg;
+    background: #0a0a0a !important;
 
     th, td {
-      border: 1px solid $dark-border;
-      color: $dark-text;
+      border: 1px solid #27272a !important;
+      color: #e5e5e5 !important;
     }
 
     th {
-      background: #18181b;
+      background: #18181b !important;
     }
 
     tr:hover {
-      background: #18181b;
+      background: #18181b !important;
     }
   }
 
-  blockquote {
-    border-left-color: $dark-border;
-    color: $dark-text-secondary;
+  /* Headings borders */
+  h2 {
+    border-bottom-color: #27272a !important;
   }
 
+  /* Metadata */
+  .page__meta,
+  .page__date {
+    color: #a1a1aa !important;
+  }
+
+  blockquote {
+    border-left-color: #27272a !important;
+    color: #a1a1aa !important;
+  }
+
+  /* Buttons */
   .btn {
-    background: $dark-bg;
-    border: 1px solid $dark-border;
-    color: $dark-text;
+    background: #0a0a0a !important;
+    border: 1px solid #27272a !important;
+    color: #e5e5e5 !important;
 
     &:hover {
-      border-color: #3f3f46;
-      color: $dark-link-hover;
+      border-color: #3f3f46 !important;
+      color: #fafafa !important;
     }
   }
 
   .notice {
-    background: #18181b;
-    border: 1px solid $dark-border;
-    color: $dark-text;
-  }
-
-  h2 {
-    border-bottom-color: $dark-border;
-  }
-
-  .page__meta, .page__date {
-    color: $dark-text-secondary;
+    background: #18181b !important;
+    border: 1px solid #27272a !important;
+    color: #e5e5e5 !important;
   }
 }
 
-/* Light mode links */
-a {
-  color: $light-link;
-  text-decoration: none;
-  transition: color 0.2s ease;
+/* ============================================
+   LIGHT MODE
+   ============================================ */
 
-  &:hover {
-    color: $light-link-hover;
-  }
-
-  &:visited {
-    color: $light-link;
-  }
+body {
+  background-color: #ffffff;
+  color: #1f2937;
+  font-size: 18px;
+  line-height: 1.7;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  transition: background-color 0.2s, color 0.2s;
 }
 
-/* Typography */
 h1, h2, h3, h4, h5, h6 {
-  color: $light-text;
+  color: #111827;
   font-weight: 600;
   letter-spacing: -0.025em;
   line-height: 1.25;
 }
 
 h1 {
-  font-size: 2.5rem;
+  font-size: 2.25rem;
   font-weight: 700;
   margin-bottom: 1rem;
 }
@@ -214,7 +230,7 @@ h2 {
   margin-top: 3rem;
   margin-bottom: 1rem;
   padding-bottom: 0.5rem;
-  border-bottom: 1px solid $light-border;
+  border-bottom: 1px solid #e5e7eb;
 }
 
 h3 {
@@ -225,82 +241,89 @@ h3 {
 
 p {
   margin-bottom: 1.5rem;
-  color: $light-text;
+  color: #374151;
 }
 
-/* Square avatar, no shadow */
+/* Links */
+a {
+  color: #1f2937;
+  text-decoration: none;
+  transition: color 0.2s;
+
+  &:hover {
+    color: #111827;
+  }
+
+  &:visited {
+    color: #1f2937;
+  }
+}
+
+/* Square avatar */
 .author__avatar {
   img {
     border-radius: 0 !important;
-    border: 1px solid $light-border;
+    border: 1px solid #e5e7eb;
     box-shadow: none !important;
   }
 }
 
-@media (prefers-color-scheme: dark) {
-  .author__avatar img {
-    border-color: $dark-border;
-  }
-}
-
 /* Navigation */
-.greedy-nav {
-  background: $light-bg;
-  border-bottom: 1px solid $light-border;
+.greedy-nav,
+.masthead {
+  background: #ffffff;
+  border-bottom: 1px solid #e5e7eb;
 
   a {
-    color: $light-text;
+    color: #1f2937;
     font-weight: 500;
     font-size: 0.9375rem;
 
     &:hover {
-      color: $light-link-hover;
+      color: #111827;
     }
   }
 }
 
-.masthead {
-  background: $light-bg;
-  border-bottom: 1px solid $light-border;
-}
-
-/* Author sidebar */
+/* Sidebar */
 .author__bio {
-  color: $light-text-secondary;
+  color: #6b7280;
   font-size: 1rem;
   line-height: 1.6;
 }
 
 .author__urls {
   a {
-    color: $light-text-secondary;
+    color: #6b7280;
     font-size: 0.9375rem;
 
     &:hover {
-      color: $light-text;
+      color: #374151;
     }
   }
 }
 
-/* Content container - max width like reference */
+/* Content */
 .page__content {
   font-size: 1.125rem;
   line-height: 1.75;
-  max-width: 65ch;
+  color: #374151;
 }
 
-/* Archive items */
+/* Archive items - clean, no boxes in light mode either */
 .archive__item {
-  border: 1px solid $light-border;
-  border-radius: 6px;
-  padding: 1.5rem;
-  margin-bottom: 1.5rem;
-  background: $light-bg;
-  transition: all 0.2s ease;
+  border: none;
+  padding: 0;
+  margin-bottom: 2rem;
+  background: transparent;
 
   &:hover {
-    border-color: #d1d5db;
+    background: transparent;
   }
+}
+
+.archive__item-teaser {
+  display: none;
 }
 
 .archive__item-title {
@@ -310,25 +333,25 @@ p {
   font-weight: 600;
 
   a {
-    color: $light-text;
+    color: #111827;
 
     &:hover {
-      color: $light-link-hover;
+      color: #000000;
     }
   }
 }
 
 .archive__item-excerpt {
-  color: $light-text-secondary;
+  color: #6b7280;
   font-size: 1rem;
   line-height: 1.6;
 }
 
 /* Code blocks */
 pre, code {
-  background-color: $light-code-bg;
-  border: 1px solid $light-border;
-  font-family: 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, monospace;
+  background-color: #f3f4f6;
+  border: 1px solid #e5e7eb;
+  font-family: 'SF Mono', Monaco, 'Cascadia Code', Consolas, monospace;
   border-radius: 4px;
   font-size: 0.875rem;
 }
@@ -345,85 +368,83 @@ code {
 
 /* Tables */
 table {
-  background: $light-bg;
+  background: #ffffff;
   border-collapse: collapse;
   width: 100%;
 
   th, td {
     padding: 0.75rem 1rem;
-    border: 1px solid $light-border;
-    text-align: left;
+    border: 1px solid #e5e7eb;
   }
 
   th {
-    background: $light-code-bg;
+    background: #f9fafb;
     font-weight: 600;
   }
 
   tr:hover {
-    background: $light-code-bg;
+    background: #f9fafb;
   }
 }
 
 /* Blockquotes */
 blockquote {
-  border-left: 3px solid $light-border;
+  border-left: 3px solid #e5e7eb;
   padding-left: 1.5rem;
-  margin-left: 0;
-  margin-right: 0;
+  margin: 1.5rem 0;
   font-style: italic;
-  color: $light-text-secondary;
+  color: #6b7280;
 }
 
 /* Footer */
 .page__footer {
-  background: $light-bg;
-  border-top: 1px solid $light-border;
-  color: $light-text-secondary;
+  background: #ffffff;
+  border-top: 1px solid #e5e7eb;
+  color: #6b7280;
   font-size: 0.875rem;
 
   a {
-    color: $light-text-secondary;
+    color: #6b7280;
 
     &:hover {
-      color: $light-text;
+      color: #374151;
     }
   }
 }
 
 /* Metadata */
-.page__meta, .page__date {
-  color: $light-text-secondary;
+.page__meta,
+.page__date {
+  color: #6b7280;
   font-size: 0.875rem;
 }
 
 /* Buttons */
 .btn {
-  background: $light-bg;
-  border: 1px solid $light-border;
-  color: $light-text;
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  color: #1f2937;
   border-radius: 6px;
   padding: 0.5rem 1rem;
   font-weight: 500;
-  font-size: 0.9375rem;
-  transition: all 0.2s ease;
+  transition: all 0.2s;
 
   &:hover {
     border-color: #d1d5db;
-    color: $light-link-hover;
+    color: #111827;
   }
 }
 
-/* Notice boxes */
+/* Notice */
 .notice {
-  background: $light-code-bg;
-  border: 1px solid $light-border;
+  background: #f3f4f6;
+  border: 1px solid #e5e7eb;
   border-radius: 6px;
   padding: 1rem;
-  color: $light-text;
+  color: #374151;
 }
 
-/* Remove unwanted shadows and effects */
+/* Remove shadows */
 .page__hero,
 .archive,
 .list__item,
@@ -437,12 +458,16 @@ blockquote {
   padding-bottom: 2rem;
 }
 
+/* Smooth scroll */
+html {
+  scroll-behavior: smooth;
+}
+
 /* Accessibility */
 @media (prefers-reduced-motion: reduce) {
   * {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
+    animation: none !important;
+    transition: none !important;
     scroll-behavior: auto !important;
   }
 }
