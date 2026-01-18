@@ -35,42 +35,69 @@
 </script>
 <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/latest.js?config=TeX-MML-AM_CHTML' async></script>
 
-<!-- Theme Toggle Script -->
-<script>
-  // Check for saved theme preference or default to 'light' mode
-  const currentTheme = localStorage.getItem('theme') || 'light';
-
-  // Apply theme on page load
-  if (currentTheme === 'dark') {
-    document.documentElement.setAttribute('data-theme', 'dark');
+<!-- Theme Toggle Button (using inline styles to ensure visibility) -->
+<style>
+  #theme-toggle-btn {
+    position: fixed !important;
+    top: 15px !important;
+    right: 15px !important;
+    width: 48px !important;
+    height: 48px !important;
+    border-radius: 50% !important;
+    border: 2px solid #ccc !important;
+    background: #fff !important;
+    cursor: pointer !important;
+    z-index: 99999 !important;
+    font-size: 24px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2) !important;
+    transition: all 0.3s ease !important;
   }
+  #theme-toggle-btn:hover {
+    transform: scale(1.1) !important;
+  }
+  [data-theme="dark"] #theme-toggle-btn {
+    background: #1a1a1a !important;
+    border-color: #444 !important;
+  }
+</style>
+<script>
+  // Apply saved theme immediately (before DOM loads to prevent flash)
+  (function() {
+    var theme = localStorage.getItem('theme');
+    if (theme === 'dark') {
+      document.documentElement.setAttribute('data-theme', 'dark');
+    } else if (!theme && window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+      document.documentElement.setAttribute('data-theme', 'dark');
+    }
+  })();
 
-  // Wait for DOM to be ready
+  // Create toggle button when DOM is ready
   document.addEventListener('DOMContentLoaded', function() {
-    // Create theme toggle button
-    const themeToggle = document.createElement('button');
-    themeToggle.id = 'theme-toggle';
-    themeToggle.setAttribute('aria-label', 'Toggle dark mode');
-    themeToggle.innerHTML = currentTheme === 'dark'
-      ? '<i class="fas fa-sun"></i>'
-      : '<i class="fas fa-moon"></i>';
+    var btn = document.createElement('button');
+    btn.id = 'theme-toggle-btn';
+    btn.setAttribute('aria-label', 'Toggle dark/light mode');
 
-    // Add toggle to body (fixed position)
-    document.body.appendChild(themeToggle);
+    function updateIcon() {
+      var isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+      btn.textContent = isDark ? '☀️' : '🌙';
+    }
 
-    // Toggle theme on button click
-    themeToggle.addEventListener('click', function() {
-      const theme = document.documentElement.getAttribute('data-theme');
+    updateIcon();
+    document.body.appendChild(btn);
 
-      if (theme === 'dark') {
+    btn.addEventListener('click', function() {
+      var isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+      if (isDark) {
         document.documentElement.setAttribute('data-theme', 'light');
         localStorage.setItem('theme', 'light');
-        themeToggle.innerHTML = '<i class="fas fa-moon"></i>';
       } else {
         document.documentElement.setAttribute('data-theme', 'dark');
         localStorage.setItem('theme', 'dark');
-        themeToggle.innerHTML = '<i class="fas fa-sun"></i>';
       }
+      updateIcon();
     });
   });
 </script>
