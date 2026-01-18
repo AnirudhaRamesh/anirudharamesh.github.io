@@ -5,7 +5,7 @@ permalink: /blog/
 author_profile: true
 ---
 
-Thoughts on AI, machine learning, robotics, and technical research.
+Thoughts on AI, robotics, and perhaps life.
 
 {% include base_path %}
 

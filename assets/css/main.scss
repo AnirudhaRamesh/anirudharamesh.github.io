@@ -138,19 +138,24 @@
     border: 1px solid #27272a !important;
   }
 
-  /* Archive items - NO BOXES */
+  /* Archive items - with separator */
   .archive__item,
   .list__item .archive__item,
   .grid__item .archive__item {
     background: transparent !important;
     border: none !important;
-    padding: 0 !important;
+    border-bottom: 1px solid #27272a !important;
+    padding: 0 0 2rem 0 !important;
     margin-bottom: 2rem !important;
     box-shadow: none !important;
 
     &:hover {
       background: transparent !important;
       box-shadow: none !important;
+    }
+
+    &:last-child {
+      border-bottom: none !important;
     }
   }
 
@@ -484,15 +489,20 @@ a {
   box-shadow: none !important;
 }
 
-/* Archive items - clean */
+/* Archive items - clean with separator between posts */
 .archive__item {
   border: none;
-  padding: 0;
+  border-bottom: 1px solid #e5e7eb;
+  padding: 0 0 2rem 0;
   margin-bottom: 2rem;
   background: transparent;
 
   &:hover {
     background: transparent;
+  }
+
+  &:last-child {
+    border-bottom: none;
   }
 }
 
@@ -505,9 +515,11 @@ a {
   margin-bottom: 0.5rem;
   font-size: 1.25rem;
   font-weight: 600;
+  border-bottom: none !important;
 
   a {
     color: #111827;
+    border-bottom: none !important;
 
     &:hover {
       color: #000000;
