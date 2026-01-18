@@ -16,6 +16,40 @@ layout: compress
     {% include browser-upgrade.html %}
     {% include masthead.html %}
 
+    <!-- Theme Toggle Button -->
+    <button id="theme-toggle-btn" onclick="toggleTheme()" aria-label="Toggle dark/light mode" style="position:fixed;top:15px;right:15px;width:50px;height:50px;border-radius:50%;border:2px solid #888;background:#fff;cursor:pointer;z-index:999999;font-size:26px;display:flex;align-items:center;justify-content:center;box-shadow:0 3px 12px rgba(0,0,0,0.3);">🌙</button>
+    <script>
+      function toggleTheme() {
+        var html = document.documentElement;
+        var btn = document.getElementById('theme-toggle-btn');
+        var isDark = html.getAttribute('data-theme') === 'dark';
+        if (isDark) {
+          html.setAttribute('data-theme', 'light');
+          localStorage.setItem('theme', 'light');
+          btn.textContent = '🌙';
+          btn.style.background = '#fff';
+          btn.style.borderColor = '#888';
+        } else {
+          html.setAttribute('data-theme', 'dark');
+          localStorage.setItem('theme', 'dark');
+          btn.textContent = '☀️';
+          btn.style.background = '#1a1a1a';
+          btn.style.borderColor = '#555';
+        }
+      }
+      // Set initial state on load
+      document.addEventListener('DOMContentLoaded', function() {
+        var theme = localStorage.getItem('theme');
+        var btn = document.getElementById('theme-toggle-btn');
+        if (theme === 'dark' || (!theme && window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+          document.documentElement.setAttribute('data-theme', 'dark');
+          btn.textContent = '☀️';
+          btn.style.background = '#1a1a1a';
+          btn.style.borderColor = '#555';
+        }
+      });
+    </script>
+
     {{ content }}
 
     <div class="page__footer">

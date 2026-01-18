@@ -20,8 +20,8 @@
           animation: intro 0.3s both;
   -webkit-animation-delay: 0.45s;
           animation-delay: 0.45s;
-  background-color: $lighter-gray;
-  border-top: 1px solid $light-gray;
+  background-color: #ffffff;
+  border-top: 1px solid #e5e7eb;
 
   footer {
     @include clearfix;
@@ -89,4 +89,24 @@
       white-space: nowrap;
     }
   }
+}
+
+/* Dark mode footer styles */
+[data-theme="dark"] .page__footer {
+  background-color: #0a0a0a !important;
+  border-top-color: #27272a;
+  color: #a1a1aa;
+
+  a {
+    color: #a1a1aa;
+
+    &:hover {
+      color: #e5e5e5;
+    }
+  }
+}
+
+[data-theme="dark"] .page__footer-follow,
+[data-theme="dark"] .page__footer-copyright {
+  color: #a1a1aa;
 }
