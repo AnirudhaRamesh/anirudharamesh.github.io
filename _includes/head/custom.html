@@ -35,4 +35,47 @@
 </script>
 <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/latest.js?config=TeX-MML-AM_CHTML' async></script>
 
+<!-- Theme Toggle Script -->
+<script>
+  // Check for saved theme preference or default to 'light' mode
+  const currentTheme = localStorage.getItem('theme') || 'light';
+
+  // Apply theme on page load
+  if (currentTheme === 'dark') {
+    document.documentElement.setAttribute('data-theme', 'dark');
+  }
+
+  // Wait for DOM to be ready
+  document.addEventListener('DOMContentLoaded', function() {
+    // Create theme toggle button
+    const themeToggle = document.createElement('button');
+    themeToggle.id = 'theme-toggle';
+    themeToggle.setAttribute('aria-label', 'Toggle dark mode');
+    themeToggle.innerHTML = currentTheme === 'dark'
+      ? '<i class="fas fa-sun"></i>'
+      : '<i class="fas fa-moon"></i>';
+
+    // Add toggle to masthead
+    const masthead = document.querySelector('.masthead__inner-wrap');
+    if (masthead) {
+      masthead.appendChild(themeToggle);
+    }
+
+    // Toggle theme on button click
+    themeToggle.addEventListener('click', function() {
+      const theme = document.documentElement.getAttribute('data-theme');
+
+      if (theme === 'dark') {
+        document.documentElement.setAttribute('data-theme', 'light');
+        localStorage.setItem('theme', 'light');
+        themeToggle.innerHTML = '<i class="fas fa-moon"></i>';
+      } else {
+        document.documentElement.setAttribute('data-theme', 'dark');
+        localStorage.setItem('theme', 'dark');
+        themeToggle.innerHTML = '<i class="fas fa-sun"></i>';
+      }
+    });
+  });
+</script>
+
 <!-- end custom head snippets -->
