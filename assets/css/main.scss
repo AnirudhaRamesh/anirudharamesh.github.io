@@ -82,21 +82,21 @@
     color: #e5e5e5 !important;
   }
 
-  /* Links - Subtle */
+  /* Links - Gray for dark mode */
   a {
-    color: #60a5fa !important;
+    color: #d4d4d8 !important;
     text-decoration: none !important;
-    border-bottom: 1px solid #3b82f6 !important;
+    border-bottom: 1px solid #52525b !important;
     transition: all 0.2s ease !important;
 
     &:hover {
-      color: #93c5fd !important;
-      border-bottom-color: #60a5fa !important;
+      color: #fafafa !important;
+      border-bottom-color: #71717a !important;
     }
 
     &:visited {
-      color: #818cf8 !important;
-      border-bottom-color: #6366f1 !important;
+      color: #d4d4d8 !important;
+      border-bottom-color: #52525b !important;
     }
   }
 
@@ -369,19 +369,19 @@
     }
 
     a {
-      color: #60a5fa !important;
+      color: #d4d4d8 !important;
       text-decoration: none !important;
-      border-bottom: 1px solid #3b82f6 !important;
+      border-bottom: 1px solid #52525b !important;
       transition: all 0.2s ease !important;
 
       &:hover {
-        color: #93c5fd !important;
-        border-bottom-color: #60a5fa !important;
+        color: #fafafa !important;
+        border-bottom-color: #71717a !important;
       }
 
       &:visited {
-        color: #818cf8 !important;
-        border-bottom-color: #6366f1 !important;
+        color: #d4d4d8 !important;
+        border-bottom-color: #52525b !important;
       }
     }
 
@@ -447,21 +447,20 @@
 
 /* Theme Toggle Button */
 #theme-toggle {
-  position: absolute;
-  right: 1em;
-  top: 50%;
-  transform: translateY(-50%);
+  position: fixed;
+  right: 2em;
+  top: 1.2em;
   background: transparent;
   border: 1px solid #e5e7eb;
   border-radius: 50%;
   width: 40px;
   height: 40px;
-  display: flex;
+  display: flex !important;
   align-items: center;
   justify-content: center;
   cursor: pointer;
   transition: all 0.2s ease;
-  z-index: 100;
+  z-index: 1001;
 
   i {
     font-size: 1.1em;
@@ -526,21 +525,21 @@ p {
   color: #374151;
 }
 
-/* Links */
+/* Links - Modern blue for light mode */
 a {
-  color: #2563eb;
+  color: #0066cc;
   text-decoration: none;
-  border-bottom: 1px solid #93c5fd;
+  border-bottom: 1px solid #0066cc;
   transition: all 0.2s ease;
 
   &:hover {
-    color: #1d4ed8;
-    border-bottom-color: #2563eb;
+    color: #0052a3;
+    border-bottom-color: #0052a3;
   }
 
   &:visited {
-    color: #4f46e5;
-    border-bottom-color: #a5b4fc;
+    color: #0066cc;
+    border-bottom-color: #0066cc;
   }
 }
 
@@ -656,6 +655,7 @@ code {
 
   a {
     color: #6b7280;
+    border-bottom: none !important;
 
     &:hover {
       color: #374151;
@@ -677,7 +677,11 @@ code {
 .page__related {
   .page__date,
   .archive__item-excerpt {
-    display: none;
+    display: none !important;
+  }
+
+  p {
+    display: none !important;
   }
 
   .archive__item {

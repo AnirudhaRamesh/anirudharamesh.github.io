@@ -55,11 +55,8 @@
       ? '<i class="fas fa-sun"></i>'
       : '<i class="fas fa-moon"></i>';
 
-    // Add toggle to masthead
-    const masthead = document.querySelector('.masthead__inner-wrap');
-    if (masthead) {
-      masthead.appendChild(themeToggle);
-    }
+    // Add toggle to body (fixed position)
+    document.body.appendChild(themeToggle);
 
     // Toggle theme on button click
     themeToggle.addEventListener('click', function() {
