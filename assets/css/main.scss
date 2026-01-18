@@ -592,25 +592,9 @@ code {
   padding: 0.125rem 0.375rem;
 }
 
-/* Footer - Force consistent background */
-.page__footer,
-footer,
-.page__footer-follow,
-.page__footer footer {
-  background: #ffffff !important;
-  background-color: #ffffff !important;
-  border-top: 1px solid #e5e7eb;
-  color: #6b7280;
-  font-size: 0.875rem;
-
-  a {
-    color: #6b7280;
-    border-bottom: none !important;
-
-    &:hover {
-      color: #374151;
-    }
-  }
+/* Hide footer */
+.page__footer {
+  display: none !important;
 }
 
 /* Hide tags */
