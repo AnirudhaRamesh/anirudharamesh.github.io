@@ -1,6 +1,6 @@
 ---
 title: "Let there be cute robots! The sillier path for the creation of data flywheels in robotics"
-date: 2026-01-18
+date: 2026-01-17
 permalink: /blog/cute-robots-data-flywheels/
 excerpt: "What if instead of billion-dollar autonomous driving approaches, we could kickstart robotics data collection with cheap, cute collectible robots that consumers actually want to interact with?"
 tags:
