@@ -665,7 +665,6 @@ footer,
 
       &:hover {
         color: #0052a3 !important;
-        text-decoration: underline !important;
       }
     }
   }
@@ -674,20 +673,22 @@ footer,
 /* Dark mode related posts */
 [data-theme="dark"] .page__related {
   .archive__item {
-    border-color: #27272a !important;
+    border: 1px solid #3f3f46 !important;
     background: #18181b !important;
 
     &:hover {
-      border-color: #3f3f46 !important;
+      border-color: #52525b !important;
       box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3) !important;
     }
   }
 
   .archive__item-title a {
-    color: #d4d4d8 !important;
+    color: #60a5fa !important;
+    border-bottom: none !important;
+    text-decoration: none !important;
 
     &:hover {
-      color: #fafafa !important;
+      color: #93c5fd !important;
     }
   }
 }
@@ -721,7 +722,7 @@ footer,
   width: 1.25em !important;
   text-align: center !important;
   font-size: 1.1em !important;
-  opacity: 0.7 !important;
+  color: #6b7280 !important;
 }
 
 .author__urls li {
@@ -732,4 +733,13 @@ footer,
 
 .author__urls a {
   border-bottom: none !important;
+}
+
+/* Dark mode sidebar icons */
+[data-theme="dark"] .author__urls i,
+[data-theme="dark"] .author__urls .fa,
+[data-theme="dark"] .author__urls .fas,
+[data-theme="dark"] .author__urls .fab,
+[data-theme="dark"] .author__urls .ai {
+  color: #a1a1aa !important;
 }
