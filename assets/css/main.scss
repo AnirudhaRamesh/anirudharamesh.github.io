@@ -676,11 +676,8 @@ code {
 /* Related posts - compact styling */
 .page__related {
   .page__date,
-  .archive__item-excerpt {
-    display: none !important;
-  }
-
-  p {
+  .archive__item-excerpt,
+  .page__meta {
     display: none !important;
   }
 
@@ -693,6 +690,10 @@ code {
     &:hover {
       border-color: #d1d5db;
     }
+  }
+
+  .archive__item-title {
+    margin: 0 !important;
   }
 }
 

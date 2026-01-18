@@ -10,7 +10,7 @@ redirect_from:
 
 I'm a Research Engineer at [InstaDeep](https://www.instadeep.com), working on LLM post-training, Deep Reinforcement Learning, and AI for Science. I'm building [DeepPCB](https://deeppcb.ai), the leading PCB routing and placement product, and contributed to [Laila](https://www.instadeep.com/2024/11/07/introducing-laila/), the world's first AI Lab Assistant (covered in [FT](https://www.ft.com/content/0f0e3c8a-8b1a-4c3a-9c3a-3e3c0f0e3c8a), [Benzinga](https://www.benzinga.com/), and more). I also mentored research pushing the frontier in long-range genomics, enabling inference of ultra-long sequences >1Mbp on a single GPU with zero-shot generalization to sequences 100× longer than seen during training ([Website](https://instadeepai.github.io/nucleotide-transformer-v2-inference-v2/), [ICLR 2025 papers](https://openreview.net/group?id=ICLR.cc/2025/Conference)). 
 
-I'm currently also working on improving compute-aware inference strategies in LLMs (post-training) and advancing AI safety via weak-to-strong generalization with a focus on effective oversight as models get stronger.
+I'm currently also working on improving compute-aware inference strategies and advancing AI safety via weak-to-strong generalization with a focus on effective oversight as models get stronger.
 
 ## Background
 
