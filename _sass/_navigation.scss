@@ -201,6 +201,33 @@
     cursor: pointer;
   }
 
+  /* Mobile navigation: show hamburger, hide collapsible items */
+  @media (max-width: 767px) {
+    button.mobile-menu-toggle {
+      display: block !important;
+      visibility: visible !important;
+    }
+
+    .visible-links .masthead__menu-item--collapsible {
+      display: none !important;
+    }
+
+    .hidden-links .masthead__menu-item--mobile-only {
+      display: block;
+    }
+  }
+
+  /* Desktop navigation: hide mobile-only items, show collapsible items */
+  @media (min-width: 768px) {
+    .hidden-links .masthead__menu-item--mobile-only {
+      display: none;
+    }
+
+    .visible-links .masthead__menu-item--collapsible {
+      display: table-cell;
+    }
+  }
+
   .visible-links {
     display: table;
 
