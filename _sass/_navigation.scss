@@ -206,10 +206,26 @@
     button.mobile-menu-toggle {
       display: block !important;
       visibility: visible !important;
+      position: absolute !important;
+      left: 50%;
+      right: auto;
+      transform: translateX(-50%);
     }
 
     .visible-links .masthead__menu-item--collapsible {
       display: none !important;
+    }
+
+    .hidden-links {
+      left: 50%;
+      right: auto;
+      transform: translateX(-50%);
+
+      &:before, &:after {
+        left: 50%;
+        right: auto;
+        transform: translateX(-50%);
+      }
     }
 
     .hidden-links .masthead__menu-item--mobile-only {
