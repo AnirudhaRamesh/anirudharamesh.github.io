@@ -1,6 +1,6 @@
 ---
 title: "Should Robots Be Able to Synthesize Aids on the Fly? Tool Synthesis as a Regularizer"
-date: 2026-01-17
+date: 2026-01-18
 permalink: /blog/tool-synthesis-as-regularizer/
 excerpt: "Exploring how on-demand tool fabrication can regularize robot learning by transforming rare, difficult tasks into familiar interactions—reducing the combinatorial complexity of open-world robotics."
 tags:
