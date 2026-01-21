@@ -12,4 +12,4 @@ This thesis presents the design and deployment of a first-of-a-kind perception s
 
 We introduce a new framework for Domain Adaptation (DA), showcased on semantic segmentation, which outperforms existing methods by +40% mIoU in unsupervised scenarios and +25-35% mIoU in semi-supervised scenarios.
 
-[Thesis Talk](https://www.youtube.com/watch?v=fkUtPgfxGhk) | [Paper](https://scholar.google.com/citations?view_op=view_citation&hl=en&user=_xTXoTQAAAAJ&authuser=1&citation_for_view=_xTXoTQAAAAJ:2osOgNQ5qMEC)
+[Thesis](https://www.ri.cmu.edu/publications/learning-to-see-in-the-dark-and-beyond/) | [Thesis Talk](https://www.youtube.com/watch?v=fkUtPgfxGhk) | [Paper](https://scholar.google.com/citations?view_op=view_citation&hl=en&user=_xTXoTQAAAAJ&authuser=1&citation_for_view=_xTXoTQAAAAJ:2osOgNQ5qMEC)
