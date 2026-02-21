@@ -2,7 +2,7 @@
 title: "We Solved Execution. Now What?"
 date: 2026-02-20
 permalink: /blog/we-solved-execution-now-what/
-excerpt: "Execution was the bottleneck. Now that AI has largely solved it, the real constraint is generating enough tasks, purposes, and feedback loops to match our new capacity."
+excerpt: "Execution was the bottleneck. Now that AI has largely solved it, the real constraint is generating enough tasks and purposes to match our new capacity."
 tags:
   - AI
   - Execution
