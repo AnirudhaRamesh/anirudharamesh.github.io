@@ -12,7 +12,7 @@ I'm a Research Engineer at [InstaDeep](https://www.instadeep.com), working on LL
 
 I'm currently also working on improving compute-aware inference strategies and advancing AI safety via weak-to-strong generalization with a focus on effective oversight as models get stronger.
 
-[Resume](files/resume.pdf) • [Research Vision (2023)](files/Research_Vision_V1.pdf)
+[Resume](files/resume.pdf)
 
 ## Background
 
@@ -30,3 +30,5 @@ I studied Computer Science at [IIIT Hyderabad](https://www.iiit.ac.in/) (CGPA: 9
 - Computer vision in challenging domains (multi-spectral, off-road)
 - Domain adaptation and few-shot learning
 - Robotic learning
+
+[Research Vision (2023)](files/Research_Vision_V1.pdf)
