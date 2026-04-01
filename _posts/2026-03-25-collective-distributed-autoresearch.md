@@ -97,5 +97,3 @@ Working on some immediate improvements to this setup, which should be useful in 
 3. Expanding and testing the collective candidate pool with other players and collaborators, who can have their own self-improvement setups.
 
 Full submission with all configs: [PR #597](https://github.com/openai/parameter-golf/pull/597)
-
-Upgrades to this line of work coming with [Matvey Zhelnov](https://x.com/Matvezy) — stay tuned.
