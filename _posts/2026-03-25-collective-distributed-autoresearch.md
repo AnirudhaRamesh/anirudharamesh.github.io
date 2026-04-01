@@ -1,5 +1,5 @@
 ---
-title: "Collective + Distributed Autoresearch: What Parameter Golf Taught Me About Pooled Learning"
+title: "The Birth of a New Era of Distributed Collective Intelligence"
 date: 2026-03-25
 permalink: /blog/collective-distributed-autoresearch/
 excerpt: "What if competition submissions weren't isolated attempts, but a collective candidate pool that everyone improves together?"
