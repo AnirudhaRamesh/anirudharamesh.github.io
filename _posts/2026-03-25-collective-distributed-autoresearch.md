@@ -14,9 +14,9 @@ Flexible compute usually means scaling up. More GPUs, bigger clusters, elastic c
 
 But there's another dimension to flexibility that gets overlooked. Not just scaling the hardware, but scaling the *effort* across people and machines, regardless of what each one has.
 
-When you're optimizing something, a model, a system, a process, you're usually doing it alone, on whatever hardware you have. But what if you didn't have to? What if you could share the problem with others, pool your efforts, and optimize together, with each person's improvements becoming starting points for the next, regardless of what machine they're running on?
+When you're optimizing something, a model, a system, a process, you're usually doing it alone, on whatever hardware you have. But what if you could share the problem with others, pool your efforts, and optimize together? Each person's improvements become starting points for the next, regardless of what machine they're running on.
 
-This is what I've been thinking about. Not distributed compute in the traditional sense, but distributed *optimization*. A shared candidate pool where anyone can pull a problem, improve it, and push the result back. The system routes effort to wherever it's most productive, and everyone's work compounds.
+Not distributed compute in the traditional sense, but distributed *optimization*. A shared candidate pool where anyone can pull a problem, improve it, and push the result back. The system routes effort to wherever it's most productive, and everyone's work compounds.
 
 ---
 
@@ -45,15 +45,13 @@ Three phases emerged naturally, without being designed for:
 
 ---
 
-The standout finding was cross-pollination.
+The most interesting result wasn't any single technique. It was cross-pollination.
 
 SwiGLU was discovered on one candidate. Mirrored recurrence was found on another, ported from [PR #84](https://github.com/openai/parameter-golf/pull/84). Neither was the best on its own. Combining them on a third candidate beat both.
 
 ![Technique Matrix](/images/parameter-golf/technique_matrix.png)
 
-The winning candidate was the only one combining *all* the winning techniques. It found those techniques by having access to a diverse pool where good ideas could be identified and recombined. You don't need a single brilliant run. You need a diverse pool where improvements from different sources compose.
-
-This is the core of it. Not the competition, not the specific techniques, but the fact that heterogeneous effort compounds when you close the loop.
+The winning candidate was the only one combining *all* the winning techniques, and it found them by having access to a diverse pool where good ideas could be identified and recombined. You don't need a single brilliant run. You need a diverse pool where improvements from different sources compose.
 
 ---
 
