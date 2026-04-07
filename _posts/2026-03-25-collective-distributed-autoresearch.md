@@ -14,21 +14,21 @@ Flexible compute usually means scaling up. More GPUs, bigger clusters, elastic c
 
 But there's another dimension to flexibility that gets overlooked — not just scaling the hardware, but scaling the *effort* across people and machines, regardless of what each one has.
 
-Most optimization efforts work the same way. People take a starting point, optimize in isolation, share the result. The work of one person doesn't directly feed into the work of another. Everyone starts from roughly the same place and branches off independently. The results are often open, reproducible, and scored on the same metric. All the ingredients for compounding are there — it's just that nobody closes the loop.
+People optimize things all the time. Models, configs, systems, processes. Mostly in isolation. The results are often open, reproducible, and scored on the same metric. All the ingredients for compounding are there — it's just that nobody closes the loop.
 
-What if independent efforts weren't isolated attempts, but a collective + distributed candidate pool that everyone improves together?
+What if independent efforts weren't isolated, but fed into a collective + distributed candidate pool that everyone improves together? Each person's improvements become starting points for the next. Each piece of compute, however small, contributes meaningfully.
 
 ---
 
-I tested this idea on OpenAI's [Parameter Golf](https://openai.com/index/parameter-golf/) challenge, deliberately constraining it to 10 minutes on a M4 MacBook Air (16GB) — as opposed to the intended 8xH100 setup. If the idea works, the hardware shouldn't matter much. It was the best submission in its compute category at time of submission.
+To put this to the test, I ran it on OpenAI's [Parameter Golf](https://openai.com/index/parameter-golf/) challenge — deliberately on a M4 MacBook Air (16GB), the most constrained Apple Silicon, as opposed to the intended 8xH100 setup. If the idea holds, the hardware shouldn't matter much.
 
-Instead of optimizing alone, pull in other participants' submissions as candidates. Run a bandit over this collective pool — explore new candidates, exploit the best ones. Train each for 10 minutes, evaluate, keep improvements, revert regressions. Every 30 minutes, scan for new submissions and add them to the pool. Share improved configs back.
+Instead of optimizing alone, pull in other participants' submissions as candidates. Run a bandit over this collective pool — explore new candidates, exploit the best ones. Train each for 10 minutes, evaluate, keep improvements, revert regressions. Periodically scan for new submissions and add them to the pool. Share improved configs back.
 
 Everyone's work compounds.
 
 ![System Diagram](/images/parameter-golf/collective_final_v2.png)
 
-An AI researcher agent runs this loop autonomously. 84 experiments over ~14 hours, across 14 candidates — 6 of which were ported directly from other participants' submissions.
+An AI researcher agent runs this loop autonomously. 84 experiments over ~14 hours, across 14 candidates — 6 ported directly from other participants' submissions. It was the best submission in its compute category at time of submission.
 
 ---
 
@@ -47,19 +47,21 @@ Three phases emerged naturally, without being designed for:
 
 The standout finding was cross-pollination.
 
-SwiGLU was discovered on one candidate. Mirrored recurrence was found on another, ported from [PR #84](https://github.com/openai/parameter-golf/pull/84). Neither was the best on its own. But combining them on a third candidate beat both.
+SwiGLU was discovered on one candidate. Mirrored recurrence was found on another, ported from [PR #84](https://github.com/openai/parameter-golf/pull/84). Neither was the best on its own. Combining them on a third candidate beat both.
 
 ![Technique Matrix](/images/parameter-golf/technique_matrix.png)
 
-The winning candidate was the only one combining *all* the winning techniques. And it found those techniques by having access to a diverse pool where good ideas could be identified and recombined. You don't need a single brilliant run. You need a diverse pool where improvements from different sources compose.
+The winning candidate was the only one combining *all* the winning techniques. It found those techniques by having access to a diverse pool where good ideas could be identified and recombined. You don't need a single brilliant run. You need a diverse pool where improvements from different sources compose.
+
+This is the core of it. Not the competition, not the specific techniques — but the fact that heterogeneous effort compounds when you close the loop.
 
 ---
 
-This is what excites me about the broader picture.
+One person, one MacBook, overnight. But there's nothing about it that requires this.
 
-What I ran was one person, one MacBook, overnight. But there's nothing about it that requires this. If multiple people ran their own autoresearch loops — each pulling from and contributing back to a shared candidate pool — improvements would compound across participants. You don't even need the same hardware. Someone on a laptop explores one part of the space, someone on a cluster explores another, and the bandit routes effort to wherever it's most productive. Every piece of compute, however small, contributes meaningfully.
+If multiple people ran their own loops — each pulling from and contributing back to a shared candidate pool — improvements would compound across participants. You don't even need the same hardware. Someone on a laptop explores one part of the space, someone on a cluster explores another, and the system routes effort to wherever it's most productive.
 
-That's what flexible compute should actually mean. Not just elastic provisioning of more of the same, but a system where heterogeneous effort — different people, different hardware, different ideas — compounds into something none of them would reach alone. Open benchmarks already provide most of what's needed. The missing piece is just the loop.
+That's what flexible compute should actually mean. Not elastic provisioning of more of the same, but a system where different people, different hardware, and different ideas compound into something none of them would reach alone. The infrastructure for this mostly exists already. The missing piece is just the loop.
 
 ---
 
