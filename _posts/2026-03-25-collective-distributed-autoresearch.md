@@ -10,15 +10,17 @@ tags:
   - Autoresearch
 ---
 
-Most optimization efforts work the same way. People take a starting point, optimize in isolation, share the result. The work of one person doesn't directly feed into the work of another. Everyone starts from roughly the same place and branches off independently.
+Flexible compute usually means scaling up. More GPUs, bigger clusters, elastic cloud provisioning. The assumption is that more hardware = better results, and that the way to participate meaningfully is to have access to serious resources.
 
-This has always struck me as wasteful. The results are often open. They're reproducible. They're scored on the same metric. All the ingredients for compounding are there — it's just that nobody closes the loop.
+But there's another dimension to flexibility that gets overlooked — not just scaling the hardware, but scaling the *effort* across people and machines, regardless of what each one has.
+
+Most optimization efforts work the same way. People take a starting point, optimize in isolation, share the result. The work of one person doesn't directly feed into the work of another. Everyone starts from roughly the same place and branches off independently. The results are often open, reproducible, and scored on the same metric. All the ingredients for compounding are there — it's just that nobody closes the loop.
 
 What if independent efforts weren't isolated attempts, but a collective + distributed candidate pool that everyone improves together?
 
 ---
 
-I tested this idea on OpenAI's [Parameter Golf](https://openai.com/index/parameter-golf/) challenge, further constraining it to 10 minutes on a M4 MacBook Air (16GB) — as opposed to the intended 8xH100 setup. It was the best submission in its compute category at time of submission.
+I tested this idea on OpenAI's [Parameter Golf](https://openai.com/index/parameter-golf/) challenge, deliberately constraining it to 10 minutes on a M4 MacBook Air (16GB) — as opposed to the intended 8xH100 setup. If the idea works, the hardware shouldn't matter much. It was the best submission in its compute category at time of submission.
 
 Instead of optimizing alone, pull in other participants' submissions as candidates. Run a bandit over this collective pool — explore new candidates, exploit the best ones. Train each for 10 minutes, evaluate, keep improvements, revert regressions. Every 30 minutes, scan for new submissions and add them to the pool. Share improved configs back.
 
@@ -55,9 +57,9 @@ The winning candidate was the only one combining *all* the winning techniques. A
 
 This is what excites me about the broader picture.
 
-What I ran was one person, one MacBook, overnight. But there's nothing about it that requires this. If multiple people ran their own autoresearch loops — each pulling from and contributing back to a shared candidate pool — improvements would compound across participants. You don't even need the same hardware. Someone on a laptop explores one part of the space, someone on a cluster explores another, and the bandit routes effort to wherever it's most productive.
+What I ran was one person, one MacBook, overnight. But there's nothing about it that requires this. If multiple people ran their own autoresearch loops — each pulling from and contributing back to a shared candidate pool — improvements would compound across participants. You don't even need the same hardware. Someone on a laptop explores one part of the space, someone on a cluster explores another, and the bandit routes effort to wherever it's most productive. Every piece of compute, however small, contributes meaningfully.
 
-This line of pooled effort gives new meaning to flexible distributed compute. Open benchmarks already provide most of what's needed — open, reproducible, scored on the same metric. The missing piece is just the loop.
+That's what flexible compute should actually mean. Not just elastic provisioning of more of the same, but a system where heterogeneous effort — different people, different hardware, different ideas — compounds into something none of them would reach alone. Open benchmarks already provide most of what's needed. The missing piece is just the loop.
 
 ---
 
