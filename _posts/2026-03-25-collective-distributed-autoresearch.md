@@ -2,7 +2,7 @@
 title: "The Birth of a New Era of Distributed Collective Intelligence"
 date: 2026-03-25
 permalink: /blog/collective-distributed-autoresearch/
-excerpt: "What if independent optimization efforts weren't isolated, but fed into a collective candidate pool that everyone improves together?"
+excerpt: "Flexible compute, redefined."
 tags:
   - AI
   - Machine Learning
