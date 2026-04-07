@@ -73,7 +73,7 @@ Full submission with all configs: [PR #597](https://github.com/openai/parameter-
 
 ---
 
-### Appendix: What worked and what didn't
+### Appendix: What worked and what didn't (Parameter Golf)
 
 **Worked:** smaller batches = more steps (the single most important insight for constrained hardware), mirrored recurrence (4 unique blocks reused across 8 layers, halves parameters while maintaining effective depth), SwiGLU over relu² (consistent improvement across every candidate), and the bandit itself (correctly concentrated 41 of 84 experiments on the eventual winner).
 
