@@ -14,21 +14,21 @@ Flexible compute usually means scaling up. More GPUs, bigger clusters, elastic c
 
 But there's another dimension to flexibility that gets overlooked — not just scaling the hardware, but scaling the *effort* across people and machines, regardless of what each one has.
 
-People optimize things all the time. Models, configs, systems, processes. Mostly in isolation. The results are often open, reproducible, and scored on the same metric. All the ingredients for compounding are there — it's just that nobody closes the loop.
+When you're optimizing something — a model, a system, a process — you're usually doing it alone, on whatever hardware you have. But what if you didn't have to? What if you could share the problem with others, pool your efforts, and optimize together — each person's improvements becoming starting points for the next, regardless of what machine they're running on?
 
-What if independent efforts weren't isolated, but fed into a collective + distributed candidate pool that everyone improves together? Each person's improvements become starting points for the next. Each piece of compute, however small, contributes meaningfully.
+This is what I've been thinking about. Not distributed compute in the traditional sense, but distributed *optimization*. A shared candidate pool where anyone can pull a problem, improve it, and push the result back. The system routes effort to wherever it's most productive, and everyone's work compounds.
 
 ---
 
-To put this to the test, I ran it on OpenAI's [Parameter Golf](https://openai.com/index/parameter-golf/) challenge — deliberately on a M4 MacBook Air (16GB), the most constrained Apple Silicon, as opposed to the intended 8xH100 setup. If the idea holds, the hardware shouldn't matter much.
+I built an initial framework for this and tested it on OpenAI's [Parameter Golf](https://openai.com/index/parameter-golf/) challenge — deliberately on a M4 MacBook Air (16GB), the most constrained Apple Silicon, as opposed to the intended 8xH100 setup. If the idea holds, the hardware shouldn't matter much.
 
-Instead of optimizing alone, pull in other participants' submissions as candidates. Run a bandit over this collective pool — explore new candidates, exploit the best ones. Train each for 10 minutes, evaluate, keep improvements, revert regressions. Periodically scan for new submissions and add them to the pool. Share improved configs back.
+The setup: share a pool of candidate solutions. An AI researcher agent runs an autoresearch loop — a bandit selects which candidate to improve, trains it for 10 minutes, evaluates, keeps improvements, reverts regressions. Periodically scan for new candidates from other participants and add them to the pool. Share improved configs back.
 
 Everyone's work compounds.
 
 ![System Diagram](/images/parameter-golf/collective_final_v2.png)
 
-An AI researcher agent runs this loop autonomously. 84 experiments over ~14 hours, across 14 candidates — 6 ported directly from other participants' submissions. It was the best submission in its compute category at time of submission.
+84 experiments over ~14 hours, across 14 candidates — 6 ported directly from other participants' submissions. It was the best submission in its compute category at time of submission.
 
 ---
 
@@ -59,9 +59,9 @@ This is the core of it. Not the competition, not the specific techniques — but
 
 One person, one MacBook, overnight. But there's nothing about it that requires this.
 
-If multiple people ran their own loops — each pulling from and contributing back to a shared candidate pool — improvements would compound across participants. You don't even need the same hardware. Someone on a laptop explores one part of the space, someone on a cluster explores another, and the system routes effort to wherever it's most productive.
+If multiple people shared their optimization problems into collective pools — each pulling from and contributing back — improvements would compound across participants. You don't even need the same hardware. Someone on a laptop explores one part of the space, someone on a cluster explores another, and the system routes effort to wherever it's most productive.
 
-That's what flexible compute should actually mean. Not elastic provisioning of more of the same, but a system where different people, different hardware, and different ideas compound into something none of them would reach alone. The infrastructure for this mostly exists already. The missing piece is just the loop.
+That's what flexible compute should actually mean. Not elastic provisioning of more of the same, but a system where different people, different hardware, and different ideas compound into something none of them would reach alone.
 
 ---
 
